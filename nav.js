@@ -1,7 +1,10 @@
 let prevScroll = window.scrollY;
+console.log("seg")
+let content = document.querySelector(".content");
 let nav = document.querySelector("nav");
-window.onscroll = () => {
-    let currScroll = window.scrollY;
+content.onscroll = () => {
+
+    let currScroll = content.scrollTop;
     if (currScroll > prevScroll) {
         nav.classList.add("hidden")
     } else {
