@@ -20,7 +20,7 @@
                     <p>M Studio by Marta Ochman</p>
                 </a>
             </div>
-            <div class="hamburger">
+            <div class="hamburger" tabindex="0">
                 <span class="center"></span>
             </div>
             <div class="menu disabled">
@@ -33,14 +33,14 @@
                     <li id="dropdown-parent"><img class="hover-img hover-img-drop"
                             src="assets/misc/brush-stroke-banner-5.png" alt="hover"><a href="">Oferta</a>
                         <ul id="dropdown">
-                            <li><img class="hover-img" src="assets/misc/brush-stroke-banner-5.png" alt="hover"><a
-                                    href="">Brow Bar</a></li>
-                            <li><img class="hover-img" src="assets/misc/brush-stroke-banner-5.png" alt="hover"><a
-                                    href="">Makijaż</a></li>
-                            <li><img class="hover-img" src="assets/misc/brush-stroke-banner-5.png" alt="hover"><a
-                                    href="">Social media</a></li>
-                            <li><img class="hover-img" src="assets/misc/brush-stroke-banner-5.png" alt="hover"><a
-                                    href="">Oferta ślubna</a></li>
+                            <li><img class="hover-img" src="assets/misc/brush2.png" alt="hover"><a href="">Brow Bar</a>
+                            </li>
+                            <li><img class="hover-img" src="assets/misc/brush2.png" alt="hover"><a href="">Makijaż</a>
+                            </li>
+                            <li><img class="hover-img" src="assets/misc/brush2.png" alt="hover"><a href="">Social
+                                    media</a></li>
+                            <li><img class="hover-img" src="assets/misc/brush2.png" alt="hover"><a href="">Oferta
+                                    ślubna</a></li>
                         </ul>
                     </li>
                     <li class="not-dropdown last-item"><img class="hover-img"
@@ -51,27 +51,36 @@
 
         <div class="wrapper-video">
             <video src="assets/intro-laminacja-HD-1080p.mp4" muted loop autoplay></video>
-            <!-- <div class="video-cover"> -->
-
-            <input type="submit" value="Przejdź dalej" id="btn-start">
-            <!-- </div> -->
+            <p id="welcome-p">Witam na mojej Stronie</p>
         </div>
 
-        <main>
+        <article>
             <div class="wrapper-img">
-
+                <img class="lazy-load image" data-src="assets/oMnie/mojeZdjecie.png" alt="moje zdjęcie">
             </div>
             <div class="wrapper-text">
-                <p class="text-anim">Miło mi, że tutaj jesteś!
-
+                <h2 class="lazy-load">Miło mi, że tutaj jesteś!</h2>
+                <p class="lazy-load">
                     Nazywam się Marta Ochman i tworzę M Studio. Jeśli chcesz dowiedzieć się więcej o mnie to
                     zapraszam
                     do zakładki o mnie</p>
             </div>
-        </main>
+        </article>
+        <article>
+            <div class="portfolio-image"><img data-src="assets/makijazOferta/doInternetu33.jpg" class="lazy-load image"
+                    alt="">
+            </div>
+            <div class="portfolio-image"><img data-src="assets/lekcjaMakiajzuOferta/DSC_0104.JPG"
+                    class="lazy-load image" alt=""></div>
+            <div class="portfolio-image"><img data-src="assets/makijazOferta/IMG_1886.jpeg" class="lazy-load image"
+                    alt=""></div>
+            <div class="portfolio-image lazy-load"><img data-src="assets/makijazOferta/doInternetu34.jpg"
+                    class="lazy-load image" alt=""></div>
+        </article>
+
     </div>
 
-    <script src="js/text.js"></script>
+    <script src="js/observer.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/home.js"></script>
 </body>

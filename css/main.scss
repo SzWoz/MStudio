@@ -1,5 +1,5 @@
 nav{
-    min-width: 100%;
+    min-width: calc(100% - 20px);
     height: 5rem;
     position: fixed;
     background: transparent;
@@ -7,6 +7,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transition: background 0.3s ease;
     .logo{
         margin-right: auto;
         display: block;
@@ -22,6 +23,8 @@ nav{
             justify-content: flex-start;
             align-items: center;
             width: 80%;
+            color: white;
+            text-decoration: none;
         }
         p{
             min-width: 150%;
@@ -61,13 +64,13 @@ nav{
             transition: transform 300ms ease;
         }
 
-        &:hover::after{
+        &:hover::after, &:focus-visible::after{
             transform: translateY(-15px) rotate(135deg);
         }
-        &:hover::before{
+        &:hover::before, &:focus-visible::before{
             transform: translateY(15px) rotate(-135deg);
         }
-        &:hover .center{
+        &:hover .center, &:focus-visible .center {
             transform: scale(0);
         }
     }
@@ -94,6 +97,11 @@ nav{
         align-items: center;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
         transition: transform 0.3s ease;
+        z-index: 10;
+        a{
+            color: white;
+            text-decoration: none;
+        }
 
         ul{
             margin-left: 15%;
@@ -114,7 +122,7 @@ nav{
                         height: 3rem;
                         filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);                   
                         position: absolute;
-                        transform: scale(0);
+                        transform: scale(0) translateY(5rem);
                         transition: transform 200ms ease;
                         z-index: 9;
                 }
@@ -132,8 +140,16 @@ nav{
                     //     }
                     // }                 
             }
-            .not-dropdown:hover .hover-img{
+            .not-dropdown:hover .hover-img, .not-dropdown:focus .hover-img{
                 transform: scale(2);
+
+            }
+            .not-dropdown:hover, .not-dropdown:focus{
+                a{
+                    color: black;
+                    transition: 0.3s ease;
+
+                }
             }
             #dropdown-parent{
                 padding: 0;
@@ -153,25 +169,47 @@ nav{
                     li{
                         font-size: 1.5rem;
                         height: auto;
+                        a{
+                            color: white;
+                        }
+                        
                         &:nth-child(3):hover, &:nth-child(4):hover{
                             .hover-img{
-                                transform: scale(1) translateX(-10%);
+                                transform: scale(1) translate(-1.5rem, -0.5rem);
+                            }
+                            a{
+                                color: black;
+                                transition: 0.3s ease;
                             }
                         }
                         &:nth-child(1):hover, &:nth-child(2):hover{
-                            .hover-img{
-                                transform: scale(1) translateX(-20%);
+                            .hover-img{                               
+                                transform: scale(1) translate(-2rem, -0.5rem);
+                            }
+                            a{
+                                color: black;
+                                transition: 0.3s ease;
+
                             }
                         }
+                        
                     }              
                 }
                 
             }
             #dropdown-parent:hover{
+                a{
+                    color: black;
+                    transition: 0.3s ease;
+                }
                 #dropdown{
                     animation: growDown 300ms ease-in-out forwards;
                     transform-origin: top center;         
                     margin-bottom: 5rem;       
+                    margin-top: 0.5rem;
+                    .hover-img-drop{
+                        transform: translateY(0rem);
+                    }
                 }       
                 @keyframes growDown {
                     0% {
@@ -186,7 +224,7 @@ nav{
                 }
             }
             #dropdown-parent:hover ~ .last-item{
-                transform: translateY(325%);
+                transform: translateY(350%);
                 transition: transform 0.3s ease-in-out;
             }
             #dropdown-parent:hover .hover-img-drop{
@@ -247,16 +285,17 @@ nav{
 
 .content::-webkit-scrollbar{
     width: 20px;
-    z-index: 100;
 }
 .content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
     background-color: #fff;
+    z-index: 100;
+
 }
 .content::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    --webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     background-color: #CC9B9C;
 }
 
