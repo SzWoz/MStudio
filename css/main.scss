@@ -12,6 +12,7 @@ nav{
         display: flex;
         align-items: center;
         flex-basis: 50%;
+        color: white;
         img{
         width: 5rem;
         height: 5rem;
@@ -23,8 +24,9 @@ nav{
         height: 40px;
         position: relative;
         margin-top: 0.5rem;
-        margin-right: 2%;
+        margin-right: 4%;
         z-index: 20;
+        cursor: pointer;
         &::after, &::before{
             content: '';
             width: 40px;
@@ -59,7 +61,7 @@ nav{
             transform: scale(0);
         }
     }
-    .active{
+    .cross{
         &::after{
             transform: translateY(-15px) rotate(135deg);
         }
@@ -76,11 +78,12 @@ nav{
         min-height: 110vh;
         display: flex;
         flex-direction: column;
-        transform: translateY(40%);
+        transform: translate(0%, 40%);
         background: #CC9B9C;
         justify-content: space-between;
         align-items: center;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
+        transition: transform 0.3s ease;
 
         ul{
             margin-left: 15%;
@@ -92,9 +95,9 @@ nav{
             list-style-type: none;
             font-size: 2rem;
 
-
             li{
-                flex-basis: 50%;               
+                flex-basis: 50%; 
+                transform: translate(500%);  
                 .hover-img{
                         width: 10rem;
                         height: 3rem;
@@ -112,13 +115,55 @@ nav{
                 &:hover .hover-img{
                         transform: scale(2);
                     }
-                
+                    &:nth-child(3){
+                        ul{
+                            display: none;
+                        }
+                    }                 
             }
 
-            li:nth-child(3){
-                ul{
-                    display: none;
-                }
+            //==========================animations===========================================
+
+            li:nth-of-type(1){
+                transform: translateX(0%);
+                transition: transform 250ms ease;
+            }
+            li:nth-of-type(2){
+                transform: translateX(0%);
+                transition: transform 250ms ease 150ms;
+            }
+            li:nth-of-type(3){
+                transform: translateX(0%);
+                transition: transform 250ms ease 250ms;
+            }
+            li:nth-of-type(4){
+                transform: translateX(0%);
+                transition: transform 250ms ease 350ms;
+            }
+            
+            
+        }
+        
+    }
+    .disabled{
+        transform: translate(100%, 40%);
+        transition: transform 300ms ease 700ms;
+        ul{
+            li:nth-of-type(1){
+                transform: translateX(500%);
+                transition: transform 250ms ease;
+            }
+            li:nth-of-type(2){
+                transform: translateX(500%);
+                transition: transform 250ms ease 150ms;
+            }
+            li:nth-of-type(3){
+                transform: translateX(500%);
+                transition: transform 250ms ease 250ms;
+            }
+            li:nth-of-type(4){
+                transform: translateX(500%);
+                transition: transform 250ms ease 350ms;
             }
         }
     }

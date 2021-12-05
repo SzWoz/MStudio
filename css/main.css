@@ -14,6 +14,7 @@ nav .logo {
   display: flex;
   align-items: center;
   flex-basis: 50%;
+  color: white;
 }
 
 nav .logo img {
@@ -27,8 +28,9 @@ nav .hamburger {
   height: 40px;
   position: relative;
   margin-top: 0.5rem;
-  margin-right: 2%;
+  margin-right: 4%;
   z-index: 20;
+  cursor: pointer;
 }
 
 nav .hamburger::after, nav .hamburger::before {
@@ -69,15 +71,15 @@ nav .hamburger:hover .center {
   transform: scale(0);
 }
 
-nav .active::after {
+nav .cross::after {
   transform: translateY(-15px) rotate(135deg);
 }
 
-nav .active::before {
+nav .cross::before {
   transform: translateY(15px) rotate(-135deg);
 }
 
-nav .active .center {
+nav .cross .center {
   transform: scale(0);
 }
 
@@ -87,11 +89,12 @@ nav .menu {
   min-height: 110vh;
   display: flex;
   flex-direction: column;
-  transform: translateY(40%);
+  transform: translate(0%, 40%);
   background: #CC9B9C;
   justify-content: space-between;
   align-items: center;
   clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
+  transition: transform 0.3s ease;
 }
 
 nav .menu ul {
@@ -107,6 +110,7 @@ nav .menu ul {
 
 nav .menu ul li {
   flex-basis: 50%;
+  transform: translate(500%);
 }
 
 nav .menu ul li .hover-img {
@@ -131,5 +135,50 @@ nav .menu ul li:hover .hover-img {
 
 nav .menu ul li:nth-child(3) ul {
   display: none;
+}
+
+nav .menu ul li:nth-of-type(1) {
+  transform: translateX(0%);
+  transition: transform 250ms ease;
+}
+
+nav .menu ul li:nth-of-type(2) {
+  transform: translateX(0%);
+  transition: transform 250ms ease 150ms;
+}
+
+nav .menu ul li:nth-of-type(3) {
+  transform: translateX(0%);
+  transition: transform 250ms ease 250ms;
+}
+
+nav .menu ul li:nth-of-type(4) {
+  transform: translateX(0%);
+  transition: transform 250ms ease 350ms;
+}
+
+nav .disabled {
+  transform: translate(100%, 40%);
+  transition: transform 300ms ease 700ms;
+}
+
+nav .disabled ul li:nth-of-type(1) {
+  transform: translateX(500%);
+  transition: transform 250ms ease;
+}
+
+nav .disabled ul li:nth-of-type(2) {
+  transform: translateX(500%);
+  transition: transform 250ms ease 150ms;
+}
+
+nav .disabled ul li:nth-of-type(3) {
+  transform: translateX(500%);
+  transition: transform 250ms ease 250ms;
+}
+
+nav .disabled ul li:nth-of-type(4) {
+  transform: translateX(500%);
+  transition: transform 250ms ease 350ms;
 }
 /*# sourceMappingURL=main.css.map */
