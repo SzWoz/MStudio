@@ -1,0 +1,135 @@
+nav {
+  min-width: 100%;
+  height: 5rem;
+  position: fixed;
+  background: transparent;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav .logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+nav .logo img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+nav .hamburger {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-right: 2%;
+  z-index: 20;
+}
+
+nav .hamburger::after, nav .hamburger::before {
+  content: '';
+  width: 40px;
+  height: 8px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px #CC9B9C;
+  transition: transform 300ms ease;
+}
+
+nav .hamburger::after {
+  top: 30px;
+}
+
+nav .hamburger .center {
+  width: 40px;
+  height: 8px;
+  position: absolute;
+  background-color: #fff;
+  top: 15px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px #CC9B9C;
+  transition: transform 300ms ease;
+}
+
+nav .hamburger:hover::after {
+  transform: translateY(-15px) rotate(135deg);
+}
+
+nav .hamburger:hover::before {
+  transform: translateY(15px) rotate(-135deg);
+}
+
+nav .hamburger:hover .center {
+  transform: scale(0);
+}
+
+nav .active::after {
+  transform: translateY(-15px) rotate(135deg);
+}
+
+nav .active::before {
+  transform: translateY(15px) rotate(-135deg);
+}
+
+nav .active .center {
+  transform: scale(0);
+}
+
+nav .menu {
+  position: absolute;
+  min-width: 50%;
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(40%);
+  background: #CC9B9C;
+  justify-content: space-between;
+  align-items: center;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
+}
+
+nav .menu ul {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80vh;
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+nav .menu ul li {
+  flex-basis: 50%;
+}
+
+nav .menu ul li .hover-img {
+  width: 10rem;
+  height: 3rem;
+  filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
+  position: absolute;
+  transform: scale(0);
+  transition: transform 200ms ease;
+  z-index: 9;
+}
+
+nav .menu ul li a {
+  position: relative;
+  z-index: 20;
+  text-decoration: none;
+}
+
+nav .menu ul li:hover .hover-img {
+  transform: scale(2);
+}
+
+nav .menu ul li:nth-child(3) ul {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

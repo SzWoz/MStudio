@@ -17,96 +17,28 @@ body{
         padding: 0;
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
-
-        nav{
-            min-width: 100%;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            position: fixed;
-            background: #CC9B9C;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            transition: transform 0.3s ease-in;
-
-            &.hidden{
-                transform: translateY(-70px);
-            }
-
-            ul{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-                flex-basis: 100%;
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-
-                li{
-                    flex-basis: 8%;
-                    height: 70px;
-                    vertical-align: middle;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-
-                    &::after{
-                        content: '';
-                        position: absolute;
-                        top: 67px;
-                        left: 0;
-                        width: 100%;
-                        height: 3px;
-                        background: #000;
-                        opacity: 0;
-                        transition: 0.3s opacity ease-in-out;
-                    }
-
-                    &:hover::after{
-                        opacity: 1;
-                    }
-                    
-                    a{
-                        text-decoration: none;
-                        color: #000;
-                    }
-                }
-                li:nth-of-type(3){
-                    position: relative;
-                    ul{
-                        background: rgba( 255, 255, 255, 0.8);
-                        opacity: 0;
-                        visibility: hidden;
-                        width: 10rem;
-                        position: absolute;
-                        top: 70px;
-                        left: 0;
-                        display: flex;
-                        flex-wrap: wrap;
-
-                        li{
-                            flex-basis: 100%;
-                            height: 30px;
-                        }
-                    }
-                &:hover{
-                    ul{
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }    
-
-                }             
-            }
+        
+        &::-webkit-scrollbar{
+            width: 20px;
+            z-index: 100;
         }
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+            background-color: #CC9B9C;
 
+        }
         .wrapper-video{
             flex-basis: 100%;
             height: 100vh;
             overflow: hidden;
             scroll-snap-align: start;
+            scroll-snap-stop: always;
             position: relative;
 
             .video-cover{
@@ -177,6 +109,8 @@ body{
             margin: 0;
             padding: 0;
             scroll-snap-align: start;
+            scroll-snap-stop: always;
+
             
     
             .wrapper-img{
