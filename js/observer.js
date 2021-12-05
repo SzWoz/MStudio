@@ -7,6 +7,7 @@ const lazyLoading = item => {
             console.log(entry);
             if (entry.isIntersecting) {
                 if (entry.target.classList.contains('image')) {
+
                     const img = entry.target;
                     const src = img.getAttribute('data-src')
                     img.setAttribute('src', src);
@@ -17,6 +18,16 @@ const lazyLoading = item => {
                         duration: 600,
                         fill: "forwards"
                     });
+                    if (entry.target.classList.contains('me')) {
+                        img.animate([
+                            { transform: "translateY(20%) scale(1.5)" },
+                        ], {
+                            duration: 500,
+                            delay: 600,
+                            fill: "forwards"
+                        });
+                    }
+
                     observer.unobserve(entry.target);
                 } else {
                     const text = entry.target;

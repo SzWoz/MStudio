@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "now-thin";
+  src: url("../assets/font/now/NowAlt-Thin.otf");
+}
+
+@font-face {
+  font-family: "now-light";
+  src: url("../assets/font/now/NowAlt-Light.otf");
+}
+
+body {
+  font-family: "now-light";
+}
+
 nav {
   min-width: calc(100% - 20px);
   height: 5rem;
@@ -8,9 +22,12 @@ nav {
   align-items: center;
   justify-content: flex-end;
   transition: background 0.3s ease;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
 nav .logo {
+  font-family: "now-thin";
   margin-right: auto;
   display: block;
   width: 40%;
@@ -166,9 +183,8 @@ nav .menu ul #dropdown-parent {
 
 nav .menu ul #dropdown-parent #dropdown {
   width: 100%;
-  max-height: 5rem;
+  min-height: fit-content;
   padding: 0;
-  max-height: 10vh;
   display: grid;
   grid-template-rows: 4rem 4rem 4rem 4rem;
   margin: 0;
@@ -185,7 +201,8 @@ nav .menu ul #dropdown-parent #dropdown li a {
 }
 
 nav .menu ul #dropdown-parent #dropdown li:nth-child(3):hover .hover-img, nav .menu ul #dropdown-parent #dropdown li:nth-child(4):hover .hover-img {
-  transform: scale(1) translate(-1.5rem, -0.5rem);
+  transform: scale(1) translate(-3rem, -0.5rem);
+  width: fit-content;
 }
 
 nav .menu ul #dropdown-parent #dropdown li:nth-child(3):hover a, nav .menu ul #dropdown-parent #dropdown li:nth-child(4):hover a {
@@ -231,7 +248,7 @@ nav .menu ul #dropdown-parent:hover #dropdown .hover-img-drop {
 }
 
 nav .menu ul #dropdown-parent:hover ~ .last-item {
-  transform: translateY(350%);
+  transform: translateX(300%);
   transition: transform 0.3s ease-in-out;
 }
 
