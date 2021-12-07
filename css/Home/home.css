@@ -81,6 +81,10 @@ body .content article:first-of-type .wrapper-img .img-fade {
   opacity: 1;
 }
 
+body .content article:first-of-type img {
+  transform: translateY(20%) scale(1.5);
+}
+
 body .content article:first-of-type .wrapper-text {
   flex-basis: 50%;
   height: 100vh;

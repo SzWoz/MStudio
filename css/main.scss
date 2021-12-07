@@ -79,15 +79,15 @@ nav{
             transition: transform 300ms ease;
         }
 
-        &:hover::after, &:focus-visible::after{
-            transform: translateY(-15px) rotate(135deg);
-        }
-        &:hover::before, &:focus-visible::before{
-            transform: translateY(15px) rotate(-135deg);
-        }
-        &:hover .center, &:focus-visible .center {
-            transform: scale(0);
-        }
+        // &:hover::after, &:focus-visible::after{
+        //     transform: translateY(-15px) rotate(135deg);
+        // }
+        // &:hover::before, &:focus-visible::before{
+        //     transform: translateY(15px) rotate(-135deg);
+        // }
+        // &:hover .center, &:focus-visible .center {
+        //     transform: scale(0);
+        // }
     }
     .cross{
         &::after{

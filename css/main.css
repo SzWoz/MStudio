@@ -89,18 +89,6 @@ nav .hamburger .center {
   transition: transform 300ms ease;
 }
 
-nav .hamburger:hover::after, nav .hamburger:focus-visible::after {
-  transform: translateY(-15px) rotate(135deg);
-}
-
-nav .hamburger:hover::before, nav .hamburger:focus-visible::before {
-  transform: translateY(15px) rotate(-135deg);
-}
-
-nav .hamburger:hover .center, nav .hamburger:focus-visible .center {
-  transform: scale(0);
-}
-
 nav .cross::after {
   transform: translateY(-15px) rotate(135deg);
 }
