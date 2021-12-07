@@ -1,1 +1,109 @@
-/* No CSS *//*# sourceMappingURL=about.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #CC9B9C;
+  overflow: hidden;
+}
+
+body .content {
+  min-width: 100%;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+body .content article {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body .content article .wrapper-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body .content article .wrapper-img img {
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: opacity, -webkit-transform 0.3s ease-in-out;
+  transition: opacity, -webkit-transform 0.3s ease-in-out;
+  transition: opacity, transform 0.3s ease-in-out;
+  transition: opacity, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+body .content article .wrapper-img .img-fade {
+  opacity: 1;
+}
+
+body .content article .wrapper-text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .content article .wrapper-text p {
+  font-size: 40px;
+  padding: 10%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  margin: 0;
+}
+
+body .content article .wrapper-text h2 {
+  margin-top: 10rem;
+  margin-bottom: 0;
+  font-size: 40px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+/*# sourceMappingURL=about.css.map */
