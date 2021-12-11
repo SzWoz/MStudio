@@ -139,6 +139,8 @@ body{
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    background: rgba(203, 154, 155, 0.3);
+
                 }
 
                 #portfolio-btn{
@@ -155,9 +157,10 @@ body{
                         filter: blur(0.5em)
                 }
                 
-                #portfolio-btn:hover, #about-btn:hover{
-                    box-shadow: 0 0 3em 1em #CC9B9C;  
-                    color: #CC9B9C;
+                #portfolio-btn:hover, #about-btn:hover, #portfolio-btn:focus-visible, #about-btn:focus-visible{
+                    box-shadow: 0 0 3em 1em #CC9B9C, inset 0 0 3em 1em #cc9b9ca2;  
+                    background: rgba(203, 154, 155, 0.5);
+
                 }
 
                 .portfolio-image{

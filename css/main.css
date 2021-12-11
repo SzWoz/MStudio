@@ -151,7 +151,7 @@ nav .menu ul li::before {
   content: '';
   width: 700%;
   position: absolute;
-  min-height: 100%;
+  min-height: 6rem;
   background: white;
   animation: in 400ms forwards;
 }
@@ -164,19 +164,19 @@ nav .menu ul li a {
 
 @keyframes in {
   from {
-    transform: translateX(0%);
+    transform: translate(-50%, -25%);
   }
   to {
-    transform: translateX(50%);
+    transform: translate(-225%, -25%);
   }
 }
 
 @keyframes out {
   from {
-    transform: translateX(-100%);
+    transform: translate(0%, -25%);
   }
   to {
-    transform: translateX(0%);
+    transform: translate(-50%, -25%);
   }
 }
 
@@ -198,7 +198,7 @@ nav .menu ul #dropdown-parent::before {
   content: '';
   width: 700%;
   position: absolute;
-  min-height: calc(100% - 2rem);
+  min-height: 6rem;
   background: white;
   animation: in 400ms forwards;
 }
@@ -222,7 +222,7 @@ nav .menu ul #dropdown-parent #dropdown li::before {
   content: '';
   width: 700%;
   position: absolute;
-  min-height: 100%;
+  min-height: 3rem;
   background: white;
   animation: in 400ms forwards;
 }
@@ -272,7 +272,7 @@ nav .menu ul #dropdown-parent:hover::before {
 }
 
 nav .menu ul .last-item {
-  padding-top: -2rem;
+  margin-top: -2rem;
 }
 
 nav .menu ul #dropdown-parent:hover ~ .last-item {
@@ -306,27 +306,27 @@ nav .menu li:nth-of-type(4) {
 
 nav .disabled {
   transform: translate(100%, 40%);
-  transition: transform 300ms ease 700ms;
+  transition: transform 300ms ease 450ms;
 }
 
 nav .disabled ul li:nth-of-type(1) {
   transform: translateX(500%);
-  transition: transform 250ms ease;
+  transition: transform 200ms ease;
 }
 
 nav .disabled ul li:nth-of-type(2) {
   transform: translateX(500%);
-  transition: transform 250ms ease 150ms;
+  transition: transform 200ms ease 150ms;
 }
 
 nav .disabled ul li:nth-of-type(3) {
   transform: translateX(500%);
-  transition: transform 250ms ease 250ms;
+  transition: transform 200ms ease 250ms;
 }
 
 nav .disabled ul li:nth-of-type(4) {
   transform: translateX(500%);
-  transition: transform 250ms ease 350ms;
+  transition: transform 200ms ease 350ms;
 }
 
 .content::-webkit-scrollbar {

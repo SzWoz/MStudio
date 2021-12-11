@@ -145,7 +145,7 @@ nav{
                     content: '';
                     width: 700%;
                     position: absolute;
-                    min-height: 100%;
+                    min-height: 6rem;
                     background: white;
                     animation: in 400ms forwards;
                 }
@@ -156,18 +156,18 @@ nav{
                 }
                 @keyframes in {
                     from{
-                        transform: translateX(0%);
+                        transform: translate(-50%, -25%);
                     }
                     to{
-                        transform: translateX(50%);
+                        transform: translate(-225%, -25%);
                     }
                 }
                 @keyframes out {
                     from{
-                        transform: translateX(-100%);
+                        transform: translate(0%, -25%);
                     }
                     to{
-                        transform: translateX(0%);
+                        transform: translate(-50%, -25%);
                     }
                 }
             }
@@ -187,7 +187,7 @@ nav{
                     content: '';
                     width: 700%;
                     position: absolute;
-                    min-height: calc(100% - 2rem);
+                    min-height: 6rem;
                     background: white;
                     animation: in 400ms forwards;
                 }
@@ -206,7 +206,7 @@ nav{
                             content: '';
                             width: 700%;
                             position: absolute;
-                            min-height: 100%;
+                            min-height: 3rem;
                             background: white;
                             animation: in 400ms forwards;
                         }
@@ -257,7 +257,7 @@ nav{
                 }
             }
             .last-item{
-                padding-top: -2rem;
+                margin-top: -2rem;
             }
             #dropdown-parent:hover ~ .last-item{
                 transform: translateX(300%);
@@ -293,23 +293,23 @@ nav{
     
     .disabled{
         transform: translate(100%, 40%);
-        transition: transform 300ms ease 700ms;
+        transition: transform 300ms ease 450ms;
         ul{
             li:nth-of-type(1){
                 transform: translateX(500%);
-                transition: transform 250ms ease;
+                transition: transform 200ms ease;
             }
             li:nth-of-type(2){
                 transform: translateX(500%);
-                transition: transform 250ms ease 150ms;
+                transition: transform 200ms ease 150ms;
             }
             li:nth-of-type(3){
                 transform: translateX(500%);
-                transition: transform 250ms ease 250ms;
+                transition: transform 200ms ease 250ms;
             }
             li:nth-of-type(4){
                 transform: translateX(500%);
-                transition: transform 250ms ease 350ms;
+                transition: transform 200ms ease 350ms;
             }
         }
     }

@@ -146,6 +146,7 @@ body .content article:nth-of-type(2) section a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background: rgba(203, 154, 155, 0.3);
 }
 
 body .content article:nth-of-type(2) section #portfolio-btn {
@@ -164,9 +165,9 @@ body .content article:nth-of-type(2) section #about-btn:hover ~ .portfolio-image
   filter: blur(0.5em);
 }
 
-body .content article:nth-of-type(2) section #portfolio-btn:hover, body .content article:nth-of-type(2) section #about-btn:hover {
-  box-shadow: 0 0 3em 1em #CC9B9C;
-  color: #CC9B9C;
+body .content article:nth-of-type(2) section #portfolio-btn:hover, body .content article:nth-of-type(2) section #about-btn:hover, body .content article:nth-of-type(2) section #portfolio-btn:focus-visible, body .content article:nth-of-type(2) section #about-btn:focus-visible {
+  box-shadow: 0 0 3em 1em #CC9B9C, inset 0 0 3em 1em #cc9b9ca2;
+  background: rgba(203, 154, 155, 0.5);
 }
 
 body .content article:nth-of-type(2) section .portfolio-image {
