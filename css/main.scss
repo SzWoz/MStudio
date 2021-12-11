@@ -135,46 +135,58 @@ nav{
                 flex-basis: 50%; 
                 transform: translate(500%);  
                 max-height: 3rem;
-                .hover-img{
-                        width: 10rem;
-                        height: 3rem;
-                        filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);                   
-                        position: absolute;
-                        transform: scale(0) translateY(5rem);
-                        transition: transform 200ms ease;
-                        z-index: 9;
+                position: relative;
+
+                &::before{
+                    content: '';
+                    width: 700%;
+                    position: absolute;
+                    min-height: 100%;
+                    background: white;
+                    animation: in 400ms forwards;
                 }
                 a{
                     position: relative;
                     z-index: 20;
                     text-decoration: none;
                 }
-                
-                      
-                    // &:nth-child(3)::hover{
-                    //     ul{
-                    //         display: flex;
-                    //         height: ;
-                    //     }
-                    // }                 
-            }
-            .not-dropdown:hover .hover-img, .not-dropdown:focus .hover-img{
-                transform: scale(2);
-
+                @keyframes in {
+                    from{
+                        transform: translateX(0%);
+                    }
+                    to{
+                        transform: translateX(50%);
+                    }
+                }
+                @keyframes out {
+                    from{
+                        transform: translateX(-100%);
+                    }
+                    to{
+                        transform: translateX(0%);
+                    }
+                }
             }
             .not-dropdown:hover, .not-dropdown:focus{
+                &::before{
+                    animation: out 300ms forwards;
+                }
                 a{
                     color: black;
                     transition: 0.3s ease;
-
                 }
             }
             #dropdown-parent{
-                padding: 0;
+                padding-bottom: 2rem;
                 text-align: center;
-                max-height: 3rem;
-
-            
+                &::before{
+                    content: '';
+                    width: 700%;
+                    position: absolute;
+                    min-height: calc(100% - 2rem);
+                    background: white;
+                    animation: in 400ms forwards;
+                }
                 #dropdown{
                     width: 100%;
                     min-height: fit-content;
@@ -186,31 +198,26 @@ nav{
                     li{
                         font-size: 1.5rem;
                         height: auto;
+                        &::before{
+                            content: '';
+                            width: 700%;
+                            position: absolute;
+                            min-height: 100%;
+                            background: white;
+                            animation: in 400ms forwards;
+                        }
                         a{
                             color: white;
                         }
+                        &:hover{
+                            &::before{
+                            animation: out 300ms forwards;
+                            }
+                            a{
+                                color: black;
+                            }
+                        }
                         
-                        &:nth-child(3):hover, &:nth-child(4):hover{
-                            .hover-img{
-                                transform: scale(1) translate(-3rem, -0.5rem);
-                                width: fit-content;
-
-                            }
-                            a{
-                                color: black;
-                                transition: 0.3s ease;
-                            }
-                        }
-                        &:nth-child(1):hover, &:nth-child(2):hover{
-                            .hover-img{                               
-                                transform: scale(1) translate(-2rem, -0.5rem);
-                            }
-                            a{
-                                color: black;
-                                transition: 0.3s ease;
-
-                            }
-                        }
                         
                     }              
                 }
@@ -241,6 +248,12 @@ nav{
                         transform: scaleY(1)
                     }
                 }
+                &::before{
+                    animation: out 300ms forwards;
+                }
+            }
+            .last-item{
+                padding-top: -2rem;
             }
             #dropdown-parent:hover ~ .last-item{
                 transform: translateX(300%);

@@ -8,7 +8,7 @@ body{
     background-color: #CC9B9C;
     overflow: hidden;
     .content{
-        min-width: 100%;
+        width: 100%;
         height: 100vh;
         position: relative;
         display: flex;
@@ -17,6 +17,12 @@ body{
         padding: 0;
         overflow-y: scroll;
         
+        .site{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
         .wrapper-video{
             flex-basis: 100%;
             height: 100vh;
