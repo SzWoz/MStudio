@@ -153,7 +153,7 @@ nav .menu ul li::before {
   position: absolute;
   min-height: 6rem;
   background: white;
-  animation: in 400ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul li a {
@@ -181,7 +181,7 @@ nav .menu ul li a {
 }
 
 nav .menu ul .not-dropdown:hover::before, nav .menu ul .not-dropdown:focus::before {
-  animation: out 300ms forwards;
+  animation: out 400ms forwards;
 }
 
 nav .menu ul .not-dropdown:hover a, nav .menu ul .not-dropdown:focus a {
@@ -200,7 +200,7 @@ nav .menu ul #dropdown-parent::before {
   position: absolute;
   min-height: 6rem;
   background: white;
-  animation: in 400ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown {
@@ -224,7 +224,7 @@ nav .menu ul #dropdown-parent #dropdown li::before {
   position: absolute;
   min-height: 3rem;
   background: white;
-  animation: in 400ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown li a {
@@ -232,7 +232,7 @@ nav .menu ul #dropdown-parent #dropdown li a {
 }
 
 nav .menu ul #dropdown-parent #dropdown li:hover::before {
-  animation: out 300ms forwards;
+  animation: out 400ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown li:hover a {

@@ -147,7 +147,7 @@ nav{
                     position: absolute;
                     min-height: 6rem;
                     background: white;
-                    animation: in 400ms forwards;
+                    animation: in 700ms forwards;
                 }
                 a{
                     position: relative;
@@ -173,7 +173,7 @@ nav{
             }
             .not-dropdown:hover, .not-dropdown:focus{
                 &::before{
-                    animation: out 300ms forwards;
+                    animation: out 400ms forwards;
                 }
                 a{
                     color: black;
@@ -189,7 +189,7 @@ nav{
                     position: absolute;
                     min-height: 6rem;
                     background: white;
-                    animation: in 400ms forwards;
+                    animation: in 700ms forwards;
                 }
                 #dropdown{
                     width: 100%;
@@ -208,14 +208,14 @@ nav{
                             position: absolute;
                             min-height: 3rem;
                             background: white;
-                            animation: in 400ms forwards;
+                            animation: in 700ms forwards;
                         }
                         a{
                             color: white;
                         }
                         &:hover{
                             &::before{
-                            animation: out 300ms forwards;
+                            animation: out 400ms forwards;
                             }
                             a{
                                 color: black;
