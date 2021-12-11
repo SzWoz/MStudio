@@ -11,26 +11,29 @@ html{
 }
 body{
     font-family: "now-light";
+    .site{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
 nav{
     min-width: calc(100% - 20px);
     height: 5rem;
     position: fixed;
-    background: transparent;
+    background: rgba(255,255,255,0.3);
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     transition: background 0.3s ease;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+
 
     .logo{
     font-family: "now-thin";
         margin-right: auto;
         display: block;
         width: 40%;
-        color: white;
         img{
         width: 5rem;
         height: 5rem;
@@ -46,6 +49,7 @@ nav{
         }
         p{
             min-width: 150%;
+            color: black;
         }
         
     }

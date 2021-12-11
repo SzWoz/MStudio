@@ -37,7 +37,6 @@ const lazyLoading = item => {
                         duration: 600,
                         fill: "forwards"
                     });
-                    navbar.style.background = "rgba(0,0,0,0.3)";
                     observer.unobserve(entry.target);
                 }
             }
