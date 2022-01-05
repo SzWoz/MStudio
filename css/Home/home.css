@@ -9,6 +9,10 @@ body {
   overflow: hidden;
 }
 
+body nav {
+  min-width: calc(100% - 20px);
+}
+
 body .content {
   width: 100%;
   height: 100vh;
@@ -18,12 +22,6 @@ body .content {
   margin: 0;
   padding: 0;
   overflow-y: scroll;
-}
-
-body .content .site {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 body .content .wrapper-video {
@@ -166,7 +164,7 @@ body .content article:nth-of-type(2) section #about-btn:hover ~ .portfolio-image
 }
 
 body .content article:nth-of-type(2) section #portfolio-btn:hover, body .content article:nth-of-type(2) section #about-btn:hover, body .content article:nth-of-type(2) section #portfolio-btn:focus-visible, body .content article:nth-of-type(2) section #about-btn:focus-visible {
-  box-shadow: 0 0 3em 1em #CC9B9C, inset 0 0 3em 1em #cc9b9ca2;
+  box-shadow: 0 0 0em 0em #CC9B9C, inset 0 0 0 0.5em #cc9b9ca2;
   background: rgba(203, 154, 155, 0.5);
 }
 

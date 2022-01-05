@@ -8,6 +8,9 @@ body{
     padding: 0;
     background-color: #CC9B9C;
     overflow: hidden;
+    nav{
+        min-width: calc(100% - 20px);
+    }
     .content{
         width: 100%;
         height: 100vh;
@@ -18,11 +21,7 @@ body{
         padding: 0;
         overflow-y: scroll;
         
-        .site{
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-        }
+        
 
         .wrapper-video{
             flex-basis: 100%;
@@ -158,7 +157,7 @@ body{
                 }
                 
                 #portfolio-btn:hover, #about-btn:hover, #portfolio-btn:focus-visible, #about-btn:focus-visible{
-                    box-shadow: 0 0 3em 1em #CC9B9C, inset 0 0 3em 1em #cc9b9ca2;  
+                    box-shadow: 0 0 0em 0em #CC9B9C, inset 0 0 0 0.5em #cc9b9ca2;
                     background: rgba(203, 154, 155, 0.5);
 
                 }
