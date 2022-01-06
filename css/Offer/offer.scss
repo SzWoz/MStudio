@@ -6,30 +6,31 @@
         grid-template-columns: 25% 25% 25% 25%;
         row-gap: 2rem;
         justify-items: center;
-        min-height: calc(100vh - 5em);
+        min-height: 80vh;
         width: 100vw;
         margin-top: 5em;
         overflow: hidden;
         .card{
             width: 100%;
-            min-height: 50%;
+            max-height: 100%;
             overflow: hidden;
             position: relative;
             background-image: url(../../assets/makijazOferta/doInternetu33.jpg);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 500%;
+            background-size: 300% 100%;
             transition: background-size 250ms ease-in-out;
 
             &:nth-of-type(2){
                 background-image: url(../../assets/ofertaBrowBar/card.JPG);
+                background-size: 300% 100%;
             }
             &:nth-of-type(3){
                 background-image: url(../../assets/socialMediaOferta/card-social.jpeg);
 
             }
             &:nth-of-type(4){
-                background-image: url(../../assets/makijazOferta/doInternetu33.jpg);
+                background-image: url(../../assets/makijazOferta/doInternetu34.jpg);
             }
 
             a{
@@ -66,7 +67,7 @@
                 transition: scale 250ms ease;
             }
             &:hover, &:focus {
-                background-size: 600%;
+                background-size: 350% 125%;
             }
         }
     }
@@ -82,7 +83,7 @@
         text-align: center;
         overflow: hidden;
 
-        h2,h3{
+        h2, h3{
             width: 100%;
             transform: translateX(100%);
         }
@@ -100,6 +101,10 @@
                 margin-top: 5em;
                 font-size: 2em;
             }
+            h3{
+                font-size: 1.2em;
+                margin-top: 5em;
+            }
         }
         .media{
             width: 100%;
@@ -113,7 +118,8 @@
                 padding: 0 1em 0 1em;
                 img{
                     width: 100%;
-                    min-height: 100%;      
+                    min-height: 100%;     
+                    clip-path: polygon(0 0, 81% 0, 100% 20%, 100% 100%, 20% 100%, 0 81%); 
                 }          
             }
             
@@ -135,7 +141,9 @@
         article:nth-of-type(3){
             background: rgb(204,155,156);
             background: linear-gradient(45deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
-            
+            h3{
+                margin-top: 5em;
+            }
         }
         article:nth-of-type(4){
             background: rgb(204,155,156);
@@ -145,6 +153,13 @@
         article:nth-of-type(5){
             background: rgb(204,155,156);
             background: linear-gradient(45deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+            h3{
+                margin-top: 8em;
+            }
+        }
+        article:nth-of-type(6){
+            background: rgb(204,155,156);
+            background: linear-gradient(135deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
             
             .media{
                 video{
@@ -153,9 +168,9 @@
                 }
             }
         }
-        article:nth-of-type(6){
+        article:nth-of-type(7){
             background: rgb(204,155,156);
-            background: linear-gradient(135deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+            background: linear-gradient(45deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
             
             .media{
                 video{
@@ -170,6 +185,29 @@
             h2{
                 margin-top: 0em;
             }
+            background: rgb(204,155,156);
+            background: linear-gradient(135deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+        }
+        article:nth-of-type(2){
+            h2{
+                margin-top: 3em;
+            }
+            background: linear-gradient(45deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+
+        }
+        article:nth-of-type(3){
+            h2{
+                margin-top: 3em;
+            }
+            background: linear-gradient(135deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+
+        }
+        article:last-of-type{
+            h2{
+                margin-top: 3em;
+            }
+            background: linear-gradient(45deg, rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
+
         }
     }
 }
