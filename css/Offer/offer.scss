@@ -15,21 +15,21 @@
             min-height: 50%;
             overflow: hidden;
             position: relative;
-            background-image: url(/assets/makijazOferta/doInternetu33.jpg);
+            background-image: url(assets/makijazOferta/doInternetu33.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: 500%;
             transition: background-size 250ms ease-in-out;
 
             &:nth-of-type(2){
-                background-image: url(/assets/ofertaBrowBar/card.JPG);
+                background-image: url(assets/ofertaBrowBar/card.JPG);
             }
             &:nth-of-type(3){
-                background-image: url(/assets/socialMediaOferta/card-social.jpeg);
+                background-image: url(assets/socialMediaOferta/card-social.jpeg);
 
             }
             &:nth-of-type(4){
-                background-image: url(/assets/makijazOferta/doInternetu34.jpg);
+                background-image: url(/assets/makijazOferta/doInternetu33.jpg);
             }
 
             a{
