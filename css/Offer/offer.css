@@ -86,7 +86,7 @@
   overflow: hidden;
 }
 
-.site section h2 {
+.site section h2, .site section h3 {
   width: 100%;
   transform: translateX(100%);
 }
