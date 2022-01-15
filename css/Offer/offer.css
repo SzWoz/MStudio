@@ -84,7 +84,6 @@
   height: auto;
   font-size: 1.25em;
   text-align: center;
-  overflow: hidden;
 }
 
 .site section h2, .site section h3 {
@@ -221,5 +220,97 @@
 
 .site #brow-bar article:last-of-type h2 {
   margin-top: 3em;
+}
+
+.site #carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.site #carousel .slider {
+  display: flex;
+  width: 900%;
+  transition: transform 250ms;
+  margin: 0 auto 0 auto;
+}
+
+.site #carousel .slider .slider-img {
+  width: 32%;
+  margin-right: 52px;
+  transition: transform 250ms;
+}
+
+.site #carousel .slider .main-img {
+  transform: scale(110%);
+}
+
+.site #carousel #next {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  bottom: 2em;
+  margin: 0 calc(auto - 60px) 0 auto;
+}
+
+.site #carousel #next::after, .site #carousel #next::before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  border-radius: 20%;
+  background-color: #cc9b9c;
+  position: absolute;
+}
+
+.site #carousel #next::after {
+  transform: rotate(45deg);
+}
+
+.site #carousel #next::before {
+  bottom: 7px;
+  transform: rotate(135deg);
+}
+
+.site #carousel #prev {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  bottom: 2em;
+  margin: 0 auto 0 auto;
+}
+
+.site #carousel #prev::after, .site #carousel #prev::before {
+  content: '';
+  width: 100%;
+  height: 10px;
+  border-radius: 20%;
+  background-color: #cc9b9c;
+  position: absolute;
+}
+
+.site #carousel #prev::after {
+  transform: rotate(135deg);
+}
+
+.site #carousel #prev::before {
+  bottom: 7px;
+  transform: rotate(45deg);
+}
+
+.site #carousel #prev:hover::after {
+  animation: next-after 250ms infinite;
+}
+
+.site #carousel #prev:hover::after {
+  animation: next-before 250ms infinite;
+}
+
+@keyframes next-after {
+  to {
+    transform: rotate(60deg);
+  }
 }
 /*# sourceMappingURL=offer.css.map */

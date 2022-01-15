@@ -4,7 +4,6 @@ const content = document.querySelector(".content");
 const lazyLoading = item => {
     const input = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            console.log(entry);
             if (entry.isIntersecting) {
                 if (entry.target.classList.contains('image')) {
 
