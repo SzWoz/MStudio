@@ -3,8 +3,10 @@
 }
 
 .site .cards-wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
   row-gap: 2rem;
   justify-items: center;
   min-height: 80vh;
@@ -22,6 +24,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 300% 100%;
+  -webkit-transition: background-size 250ms ease-in-out;
   transition: background-size 250ms ease-in-out;
 }
 
@@ -47,27 +50,40 @@
   top: 40%;
   height: 20%;
   width: 80%;
-  box-shadow: 0 0 0 0.25em #CC9B9C;
+  -webkit-box-shadow: 0 0 0 0.25em #CC9B9C;
+          box-shadow: 0 0 0 0.25em #CC9B9C;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.5rem;
   font-weight: 800;
   text-decoration: none;
   color: white;
   background: rgba(203, 154, 155, 0.3);
+  -webkit-transition: -webkit-box-shadow 250ms ease-in-out;
+  transition: -webkit-box-shadow 250ms ease-in-out;
   transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out, -webkit-box-shadow 250ms ease-in-out;
 }
 
 .site .cards-wrapper .card a:hover, .site .cards-wrapper .card a:focus {
-  box-shadow: 0 0 0em 0em #CC9B9C, inset 0 0 0 1em #cc9b9ca2;
+  -webkit-box-shadow: 0 0 0em 0em #CC9B9C, inset 0 0 0 1em #cc9b9ca2;
+          box-shadow: 0 0 0em 0em #CC9B9C, inset 0 0 0 1em #cc9b9ca2;
   background: rgba(203, 154, 155, 0.5);
 }
 
 .site .cards-wrapper .card img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   min-height: 100%;
+  -webkit-transition: scale 250ms ease;
   transition: scale 250ms ease;
 }
 
@@ -76,10 +92,17 @@
 }
 
 .site section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-width: 100vh;
   height: auto;
   font-size: 1.25em;
@@ -88,15 +111,18 @@
 
 .site section h2, .site section h3 {
   width: 100%;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .site section p {
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .site section article {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   padding: 0 10em 0 10em;
   height: 80vh;
   overflow: hidden;
@@ -115,12 +141,17 @@
 .site section .media {
   width: 100%;
   max-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .site section .media .img-wrapper {
-  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   min-height: 100%;
   overflow: hidden;
   padding: 0 1em 0 1em;
@@ -129,7 +160,8 @@
 .site section .media .img-wrapper img {
   width: 100%;
   min-height: 100%;
-  clip-path: polygon(0 0, 81% 0, 100% 20%, 100% 100%, 20% 100%, 0 81%);
+  -webkit-clip-path: polygon(0 0, 81% 0, 100% 20%, 100% 100%, 20% 100%, 0 81%);
+          clip-path: polygon(0 0, 81% 0, 100% 20%, 100% 100%, 20% 100%, 0 81%);
 }
 
 .site section article:nth-of-type(1) {

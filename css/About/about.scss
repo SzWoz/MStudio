@@ -20,6 +20,7 @@ body{
             margin: 0;
             padding: 0;
             article:nth-of-type(odd){
+                font-size: 2em;
             flex-basis: 100%;
             height: auto;
             // display: flex;
@@ -78,6 +79,7 @@ body{
             }
         }
         article{
+            font-size: 2em;
             flex-basis: 100%;
             height: auto;
             // display: flex;
@@ -123,9 +125,60 @@ body{
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
-                
-                
+                // clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
+
+                p{
+                    transform: translateX(100%);
+                    margin: 0;
+                }
+                h2{
+                    margin-top: 1rem;
+                    margin-bottom: 0;
+                    transform: translateX(100%);
+                }
+            }
+        }
+        .poziomyartykul{
+            grid-template-areas: "wrapper-text"
+                                "wrapper-img";
+            grid-template-columns: 100%;
+            grid-template-rows: 50vh 50vh;
+            .wrapper-img{
+                // flex-basis: 40%;
+                grid-area: wrapper-img;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img{
+                    object-fit: cover;
+                    opacity: 0;
+                    width: auto;
+                    height: 100%;
+                    transition: opacity, transform 0.3s ease-in-out;
+                }
+                .img-fade{
+                    opacity: 1;
+                }
+            }
+            .wrapper-text{
+                // flex-basis: auto;
+                grid-area: wrapper-text;
+                height: 50vh;
+                margin: 0;
+                padding: 0;
+                background-color: #CC9B9C;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                // clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
+
                 p{
                     transform: translateX(100%);
                     margin: 0;
