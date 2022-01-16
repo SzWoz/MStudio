@@ -19,15 +19,10 @@ body {
 }
 
 body .site {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 nav {
@@ -36,16 +31,9 @@ nav {
   position: fixed;
   background: rgba(255, 255, 255, 0.3);
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-transition: background 0.3s ease;
+  align-items: center;
+  justify-content: flex-end;
   transition: background 0.3s ease;
 }
 
@@ -63,15 +51,9 @@ nav .logo img {
 }
 
 nav .logo a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   width: 80%;
   color: white;
   text-decoration: none;
@@ -99,12 +81,8 @@ nav .hamburger::after, nav .hamburger::before {
   position: absolute;
   background-color: #fff;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0 0 1px #CC9B9C;
-          box-shadow: 0 0 0 1px #CC9B9C;
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
+  box-shadow: 0 0 0 1px #CC9B9C;
   transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
 nav .hamburger::after {
@@ -118,55 +96,34 @@ nav .hamburger .center {
   background-color: #fff;
   top: 15px;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0 0 1px #CC9B9C;
-          box-shadow: 0 0 0 1px #CC9B9C;
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
+  box-shadow: 0 0 0 1px #CC9B9C;
   transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
 nav .cross::after {
-  -webkit-transform: translateY(-15px) rotate(135deg);
-          transform: translateY(-15px) rotate(135deg);
+  transform: translateY(-15px) rotate(135deg);
 }
 
 nav .cross::before {
-  -webkit-transform: translateY(15px) rotate(-135deg);
-          transform: translateY(15px) rotate(-135deg);
+  transform: translateY(15px) rotate(-135deg);
 }
 
 nav .cross .center {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
 }
 
 nav .menu {
   position: absolute;
   min-width: 50%;
   min-height: 110vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transform: translate(0%, 40%);
-          transform: translate(0%, 40%);
+  flex-direction: column;
+  transform: translate(0%, 40%);
   background: #CC9B9C;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
-          clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
+  justify-content: space-between;
+  align-items: center;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 35% 100%);
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   z-index: 10;
 }
 
@@ -177,29 +134,18 @@ nav .menu a {
 
 nav .menu ul {
   margin-left: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   min-height: 80vh;
   list-style-type: none;
   font-size: 2.5rem;
 }
 
 nav .menu ul li {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  -webkit-transform: translate(500%);
-          transform: translate(500%);
+  flex-basis: 50%;
+  transform: translate(500%);
   max-height: 3rem;
   position: relative;
 }
@@ -210,8 +156,7 @@ nav .menu ul li::before {
   position: absolute;
   min-height: 6rem;
   background: white;
-  -webkit-animation: in 700ms forwards;
-          animation: in 700ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul li a {
@@ -220,58 +165,30 @@ nav .menu ul li a {
   text-decoration: none;
 }
 
-@-webkit-keyframes in {
-  from {
-    -webkit-transform: translate(-50%, -25%);
-            transform: translate(-50%, -25%);
-  }
-  to {
-    -webkit-transform: translate(-225%, -25%);
-            transform: translate(-225%, -25%);
-  }
-}
-
 @keyframes in {
   from {
-    -webkit-transform: translate(-50%, -25%);
-            transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
   }
   to {
-    -webkit-transform: translate(-225%, -25%);
-            transform: translate(-225%, -25%);
-  }
-}
-
-@-webkit-keyframes out {
-  from {
-    -webkit-transform: translate(0%, -25%);
-            transform: translate(0%, -25%);
-  }
-  to {
-    -webkit-transform: translate(-50%, -25%);
-            transform: translate(-50%, -25%);
+    transform: translate(-225%, -25%);
   }
 }
 
 @keyframes out {
   from {
-    -webkit-transform: translate(0%, -25%);
-            transform: translate(0%, -25%);
+    transform: translate(0%, -25%);
   }
   to {
-    -webkit-transform: translate(-50%, -25%);
-            transform: translate(-50%, -25%);
+    transform: translate(-50%, -25%);
   }
 }
 
 nav .menu ul .not-dropdown:hover::before, nav .menu ul .not-dropdown:focus::before {
-  -webkit-animation: out 400ms forwards;
-          animation: out 400ms forwards;
+  animation: out 400ms forwards;
 }
 
 nav .menu ul .not-dropdown:hover a, nav .menu ul .not-dropdown:focus a {
   color: black;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -286,23 +203,17 @@ nav .menu ul #dropdown-parent::before {
   position: absolute;
   min-height: 6rem;
   background: white;
-  -webkit-animation: in 700ms forwards;
-          animation: in 700ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown {
   width: 100%;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
   min-height: fit-content;
   padding: 0;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 4rem 4rem 4rem 4rem;
-      grid-template-rows: 4rem 4rem 4rem 4rem;
+  grid-template-rows: 4rem 4rem 4rem 4rem;
   margin: 0;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
+  transform: scaleY(0);
 }
 
 nav .menu ul #dropdown-parent #dropdown li {
@@ -316,8 +227,7 @@ nav .menu ul #dropdown-parent #dropdown li::before {
   position: absolute;
   min-height: 3rem;
   background: white;
-  -webkit-animation: in 700ms forwards;
-          animation: in 700ms forwards;
+  animation: in 700ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown li a {
@@ -325,8 +235,7 @@ nav .menu ul #dropdown-parent #dropdown li a {
 }
 
 nav .menu ul #dropdown-parent #dropdown li:hover::before {
-  -webkit-animation: out 400ms forwards;
-          animation: out 400ms forwards;
+  animation: out 400ms forwards;
 }
 
 nav .menu ul #dropdown-parent #dropdown li:hover a {
@@ -335,57 +244,34 @@ nav .menu ul #dropdown-parent #dropdown li:hover a {
 
 nav .menu ul #dropdown-parent:hover a {
   color: black;
-  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 nav .menu ul #dropdown-parent:hover #dropdown {
-  -webkit-animation: growDown 300ms ease-in-out forwards;
-          animation: growDown 300ms ease-in-out forwards;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
   margin-bottom: 5rem;
   margin-top: 0.5rem;
 }
 
 nav .menu ul #dropdown-parent:hover #dropdown .hover-img-drop {
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
-}
-
-@-webkit-keyframes growDown {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-  80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
+  transform: translateY(0rem);
 }
 
 @keyframes growDown {
   0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    transform: scaleY(0);
   }
   80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
+    transform: scaleY(1.1);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    transform: scaleY(1);
   }
 }
 
 nav .menu ul #dropdown-parent:hover::before {
-  -webkit-animation: out 300ms forwards;
-          animation: out 300ms forwards;
+  animation: out 300ms forwards;
 }
 
 nav .menu ul .last-item {
@@ -393,98 +279,57 @@ nav .menu ul .last-item {
 }
 
 nav .menu ul #dropdown-parent:hover ~ .last-item {
-  -webkit-transform: translateX(300%);
-          transform: translateX(300%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
+  transform: translateX(300%);
   transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 nav .menu ul #dropdown-parent:hover .hover-img-drop {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  transform: scale(2);
 }
 
 nav .menu li:nth-of-type(1) {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: -webkit-transform 250ms ease;
-  transition: -webkit-transform 250ms ease;
+  transform: translateX(0%);
   transition: transform 250ms ease;
-  transition: transform 250ms ease, -webkit-transform 250ms ease;
 }
 
 nav .menu li:nth-of-type(2) {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: -webkit-transform 250ms ease 150ms;
-  transition: -webkit-transform 250ms ease 150ms;
+  transform: translateX(0%);
   transition: transform 250ms ease 150ms;
-  transition: transform 250ms ease 150ms, -webkit-transform 250ms ease 150ms;
 }
 
 nav .menu li:nth-of-type(3) {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: -webkit-transform 250ms ease 250ms;
-  transition: -webkit-transform 250ms ease 250ms;
+  transform: translateX(0%);
   transition: transform 250ms ease 250ms;
-  transition: transform 250ms ease 250ms, -webkit-transform 250ms ease 250ms;
 }
 
 nav .menu li:nth-of-type(4) {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-  -webkit-transition: -webkit-transform 250ms ease 350ms;
-  transition: -webkit-transform 250ms ease 350ms;
+  transform: translateX(0%);
   transition: transform 250ms ease 350ms;
-  transition: transform 250ms ease 350ms, -webkit-transform 250ms ease 350ms;
 }
 
 nav .disabled {
-  -webkit-transform: translate(100%, 40%);
-          transform: translate(100%, 40%);
-  -webkit-transition: -webkit-transform 300ms ease 450ms;
-  transition: -webkit-transform 300ms ease 450ms;
+  transform: translate(100%, 40%);
   transition: transform 300ms ease 450ms;
-  transition: transform 300ms ease 450ms, -webkit-transform 300ms ease 450ms;
 }
 
 nav .disabled ul li:nth-of-type(1) {
-  -webkit-transform: translateX(500%);
-          transform: translateX(500%);
-  -webkit-transition: -webkit-transform 200ms ease;
-  transition: -webkit-transform 200ms ease;
+  transform: translateX(500%);
   transition: transform 200ms ease;
-  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
 nav .disabled ul li:nth-of-type(2) {
-  -webkit-transform: translateX(500%);
-          transform: translateX(500%);
-  -webkit-transition: -webkit-transform 200ms ease 150ms;
-  transition: -webkit-transform 200ms ease 150ms;
+  transform: translateX(500%);
   transition: transform 200ms ease 150ms;
-  transition: transform 200ms ease 150ms, -webkit-transform 200ms ease 150ms;
 }
 
 nav .disabled ul li:nth-of-type(3) {
-  -webkit-transform: translateX(500%);
-          transform: translateX(500%);
-  -webkit-transition: -webkit-transform 200ms ease 250ms;
-  transition: -webkit-transform 200ms ease 250ms;
+  transform: translateX(500%);
   transition: transform 200ms ease 250ms;
-  transition: transform 200ms ease 250ms, -webkit-transform 200ms ease 250ms;
 }
 
 nav .disabled ul li:nth-of-type(4) {
-  -webkit-transform: translateX(500%);
-          transform: translateX(500%);
-  -webkit-transition: -webkit-transform 200ms ease 350ms;
-  transition: -webkit-transform 200ms ease 350ms;
+  transform: translateX(500%);
   transition: transform 200ms ease 350ms;
-  transition: transform 200ms ease 350ms, -webkit-transform 200ms ease 350ms;
 }
 
 .content::-webkit-scrollbar {

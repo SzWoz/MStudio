@@ -3,15 +3,28 @@ const slider = document.querySelector(".slider");
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 
-let count = 1;
-let imgWidth = 0;
-let currMargin = 0;
-setTimeout(() => {
-    imgWidth = images[count].offsetWidth + 52;
+const mediaQuery = window.matchMedia('(max-width: 700px)')
 
-}, 200)
-console.log(imgWidth)
+let imgWidth;
+
+
+if (mediaQuery.matches) {
+    setTimeout(() => {
+        imgWidth = images[count].offsetWidth + 50;
+
+    }, 200);
+} else {
+    setTimeout(() => {
+        imgWidth = images[count].offsetWidth + 50;
+
+    }, 200);
+}
+let count = 1;
+
+
 next.addEventListener('click', () => {
+    console.log(imgWidth)
+
     count++
     if (count == images.length - 1) {
         images[count].classList.toggle('main-img');
