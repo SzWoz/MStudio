@@ -1,69 +1,66 @@
-const images = document.querySelectorAll(".slider-img");
-const slider = document.querySelector(".slider");
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
-
-const mediaQuery = window.matchMedia('(max-width: 700px)')
-
-let imgWidth;
+const sliderContainer = document.querySelector(".slider");
+const slider = document.querySelector(".slides");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 
 
-if (mediaQuery.matches) {
-    setTimeout(() => {
-        imgWidth = images[count].offsetWidth + 50;
+let slide = document.querySelectorAll(".slide");
 
-    }, 200);
-} else {
-    setTimeout(() => {
-        imgWidth = images[count].offsetWidth + 50;
+let slidePos = 1;
 
-    }, 200);
-}
-let count = 1;
+let slideWidth = 500;
+
+let firstSlide = slide[0].cloneNode(true);
+let lastSlide = slide[slide.length - 1].cloneNode(true);
+
+firstSlide.id = 'first-slide';
+lastSlide.id = 'last-slide';
 
 
-next.addEventListener('click', () => {
-    console.log(imgWidth)
+slider.append(firstSlide);
+slider.prepend(lastSlide);
 
-    count++
-    if (count == images.length - 1) {
-        images[count].classList.toggle('main-img');
-        images[count - 1].classList.toggle('main-img');
 
-    } else if (count >= images.length) {
-        images[count - 1].classList.toggle('main-img');
-        count = 0;
-        slider.style.transform = `translateX(${-imgWidth * (count)}px)`;
-        images[count].classList.toggle('main-img');
 
+slider.style.transform = `translateX(${-slideWidth * slidePos}px)`;
+
+
+
+
+
+next.addEventListener("click", () => {
+    slide = document.querySelectorAll(".slide");
+
+    slidePos++;
+    slider.style.transition = "0.7s";
+
+    slider.style.transform = `translateX(${-slideWidth * slidePos}px)`;
+    console.log(slide[slidePos])
+
+});
+prev.addEventListener("click", () => {
+    slide = document.querySelectorAll(".slide");
+
+    slidePos--;
+    slider.style.transition = "0.7s";
+
+    slider.style.transform = `translateX(${slideWidth * slidePos}px)`;
+
+    console.log(slidePos)
+
+    console.log(slideWidth * slidePos)
+
+
+});
+
+slider.addEventListener("transitionend", () => {
+    slide = document.querySelectorAll(".slide");
+    if (slide[slidePos].id == firstSlide.id) {
+        slidePos = 1;
+        slider.style.transition = "none"
+        slider.style.transform = `translateX(${-slideWidth * slidePos}px)`;
+        console.log("jeeeac")
     }
-    else {
-        slider.style.transform = `translateX(${-imgWidth * (count - 1)}px)`;
-        images[count - 1].classList.toggle('main-img');
-        images[count].classList.toggle('main-img');
-    }
-})
+    console.log("gowmo")
+});
 
-prev.addEventListener('click', () => {
-    count--;
-    if (count == 0) {
-        images[count].classList.toggle('main-img');
-        images[count + 1].classList.toggle('main-img');
-
-    } else if (count == -1) {
-        images[count + 1].classList.toggle('main-img');
-        count = 8;
-        slider.style.transform = `translateX(${-imgWidth * (count - 2)}px)`;
-        images[count].classList.toggle('main-img');
-
-    } else if (count == images.length - 2) {
-        images[count].classList.toggle('main-img');
-        images[count + 1].classList.toggle('main-img');
-
-    } else {
-        slider.style.transform = `translateX(${-imgWidth * (count - 1)}px)`;
-        images[count].classList.toggle('main-img');
-        images[count + 1].classList.toggle('main-img');
-        console.log('g')
-    }
-})
