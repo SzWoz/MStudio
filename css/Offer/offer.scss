@@ -6,7 +6,7 @@
         grid-template-columns: 25% 25% 25% 25%;
         row-gap: 2rem;
         justify-items: center;
-        min-height: 80vh;
+        min-height: 100vh;
         width: 100vw;
         margin-top: 5em;
         overflow: hidden;
@@ -23,7 +23,10 @@
 
             &:nth-of-type(2){
                 background-image: url(../../assets/ofertaBrowBar/card.JPG);
-                background-size: 300% 100%;
+                background-size: 105% 105%;
+                &:hover, &:focus {
+                    background-size: 125% 125%; 
+                }
             }
             &:nth-of-type(3){
                 background-image: url(../../assets/socialMediaOferta/card-social.jpeg);
@@ -67,7 +70,7 @@
                 transition: scale 250ms ease;
             }
             &:hover, &:focus {
-                background-size: 350% 125%;
+                background-size: 350% 125%; 
             }
         }
     }
@@ -89,7 +92,8 @@
         
         p{
             transform: translateX(100%);
-            margin: 0
+            margin: 0;
+            
         }
         article{
             flex-basis: 100%;
@@ -109,15 +113,17 @@
             h3{
                 font-size: 1.2em;
                 //margin-top: 5em;
+                height: 5%;
+
                 flex-basis: 100%;
             }
         }
         .media{
-            flex-basis: calc(50% - 1em);
+            flex-basis: 50%;
             //max-height: 40vh;
             height: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
 
             img{
                 max-width: 50%;
@@ -139,10 +145,11 @@
         }
         p{
             flex-basis: 50%;
-            padding: 0 1em 0 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 80%;
+            text-align: center;
         }
         article:nth-of-type(1){
             background: rgb(204,155,156);
