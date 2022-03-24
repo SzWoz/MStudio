@@ -1,6 +1,8 @@
+body{
+    overflow-x: hidden;
+}
 .site{
     height: 100%;
-    
     .cards-wrapper{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -90,6 +92,10 @@
             transform: translateX(100%);
             position: absolute;
             z-index: 1;
+            background: linear-gradient(to right, #000 50%, #fff 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         }
         
         p{
