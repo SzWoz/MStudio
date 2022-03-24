@@ -93,6 +93,8 @@
 .site section h2, .site section h3 {
   width: 100%;
   transform: translateX(100%);
+  position: absolute;
+  z-index: 1;
 }
 
 .site section p {
@@ -110,14 +112,16 @@
 }
 
 .site section article h2 {
+  margin: 0 0 0 0;
   font-size: 2em;
-  height: 5%;
+  height: 10%;
   flex-basis: 100%;
 }
 
 .site section article h3 {
   font-size: 1.2em;
-  height: 5%;
+  margin: 0 0 0 0;
+  height: 10%;
   flex-basis: 100%;
 }
 
@@ -126,6 +130,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   /* .img-wrapper{
                 flex-basis: 100%;
                 min-height: 100%;
