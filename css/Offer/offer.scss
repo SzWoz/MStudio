@@ -91,13 +91,12 @@ body{
             width: 100%;
             transform: translateX(100%);
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             background: linear-gradient(to right, #000 50%, #fff 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
         p{
             transform: translateX(100%);
             margin: 0;
@@ -124,6 +123,7 @@ body{
                 height: 10%;
                 flex-basis: 100%;
             }
+            
         }
         .media{
             flex-basis: 50%;
@@ -131,7 +131,7 @@ body{
             height: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             img{
                 max-width: 50%;
                 height: auto;
@@ -161,19 +161,27 @@ body{
         article:nth-of-type(1){
             background: rgb(204,155,156);
             background: linear-gradient(90deg,rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
-
-           
+           h2{
+            background: linear-gradient(to left, rgba(204,155,156,1) 50%, #000 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           }
             
         }
         article:nth-of-type(2){
             background: rgb(204,155,156);
             background: linear-gradient(90deg, rgba(204,155,156,0) 50%, rgba(204,155,156,1) 50%); 
-            
         }
         article:nth-of-type(3){
             background: rgb(204,155,156);
             background: linear-gradient(90deg,rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
-
+            h3{
+                background: linear-gradient(to left, rgba(204,155,156,1) 50%, #000 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+               }
             
         }
         article:nth-of-type(4){
@@ -185,14 +193,24 @@ body{
         article:nth-of-type(5){
             background: rgb(204,155,156);
             background: linear-gradient(90deg,rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
-
+            h3{
+                background: linear-gradient(to left, rgba(204,155,156,1) 50%, #000 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+               }
             
         }
         article:nth-of-type(6){
             background: rgb(204,155,156);
             background: linear-gradient(90deg, rgba(204,155,156,0) 50%, rgba(204,155,156,1) 50%); 
 
-            
+            h2{
+                background: linear-gradient(to left, rgba(204,155,156,1) 50%, #000 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+               }
             .media{
                 video{
                     width: 50%;
@@ -203,7 +221,7 @@ body{
         article:nth-of-type(7){
             background: rgb(204,155,156);
             background: linear-gradient(90deg,rgba(204,155,156,1) 50%, rgba(204,155,156,0) 50%); 
-
+            
             
             .media{
                 video{
@@ -217,10 +235,17 @@ body{
     }
     #brow-bar{
         article:first-of-type{
-            
             background: rgb(204,155,156);
             background: linear-gradient(90deg, rgba(204,155,156,0) 50%, rgba(204,155,156,1) 50%); 
-
+            h2{
+                background: linear-gradient(to right, #000 50%, #fff 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h3{
+                margin-top: 3rem;
+            }
         }
         article:nth-of-type(2){
             
