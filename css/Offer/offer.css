@@ -94,7 +94,8 @@ body {
   overflow: hidden;
 }
 
-.site section h2, .site section h3 {
+.site section h2,
+.site section h3 {
   width: 100%;
   transform: translateX(100%);
   position: absolute;
@@ -238,6 +239,20 @@ body {
 .site section article:nth-of-type(7) .media video {
   width: 50%;
   min-height: 100%;
+}
+
+.site #brow-bar article h3 {
+  background: linear-gradient(to right, #000 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site #brow-bar article:nth-of-type(2n) h3 {
+  background: linear-gradient(to right, #fff 50%, #000 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .site #brow-bar article:first-of-type {
