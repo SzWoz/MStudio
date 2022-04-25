@@ -31,11 +31,11 @@ body {
 
 .site .cards-wrapper .card:nth-of-type(2) {
   background-image: url(../../assets/ofertaBrowBar/card.JPG);
-  background-size: 105% 105%;
+  background-size: 150% 105%;
 }
 
 .site .cards-wrapper .card:nth-of-type(2):hover, .site .cards-wrapper .card:nth-of-type(2):focus {
-  background-size: 125% 125%;
+  background-size: 175% 125%;
 }
 
 .site .cards-wrapper .card:nth-of-type(3) {
@@ -80,7 +80,7 @@ body {
 }
 
 .site .cards-wrapper .card:hover, .site .cards-wrapper .card:focus {
-  background-size: 350% 125%;
+  background-size: 350% 120%;
 }
 
 .site section {
@@ -337,4 +337,3 @@ body {
   left: 75%;
   top: 90%;
 }
-/*# sourceMappingURL=offer.css.map */

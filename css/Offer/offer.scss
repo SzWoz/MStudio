@@ -28,11 +28,11 @@ body {
 
             &:nth-of-type(2) {
                 background-image: url(../../assets/ofertaBrowBar/card.JPG);
-                background-size: 105% 105%;
+                background-size: 150% 105%;
 
                 &:hover,
                 &:focus {
-                    background-size: 125% 125%;
+                    background-size: 175% 125%;
                 }
             }
 
@@ -82,7 +82,7 @@ body {
 
             &:hover,
             &:focus {
-                background-size: 350% 125%;
+                background-size: 350% 120%;
             }
         }
     }
